@@ -3,7 +3,8 @@
     <v-row class="pa-1">
         <v-carousel
           cycle
-          height="400"
+          :height="height"
+          :width="width"
           hide-delimiter-background
           show-arrows-on-hover
           :show-arrows="false"
@@ -45,7 +46,27 @@ export default {
       'Fifth'
     ]
 
-  })
+  }),
+  computed: {
+    height () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 150
+        case 'sm': return 250
+        case 'md': return 350
+        case 'lg': return 450
+        case 'xl': return 550
+      }
+    },
+    width () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 120
+        case 'sm': return 200
+        case 'md': return 300
+        case 'lg': return 400
+        case 'xl': return 500
+      }
+    }
+  }
 }
 </script>
 

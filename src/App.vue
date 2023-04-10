@@ -1,5 +1,5 @@
 <template>
-  <v-app pa-0 color="#e7e8ec">
+  <v-app pa-0>
     <Appbar/>
     <br>
     <v-main>
@@ -11,6 +11,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'App',
   components: {
@@ -23,5 +24,7 @@ export default {
 }
 </script>
 <style>
-
+#app {
+  background-color: #e7e8ec !important;
+}
 </style>
